@@ -19,17 +19,20 @@
 
 // This header file contains all the tuning parameters for the outlier detection algorithm
 
-const float g_FRACTION_PARAMETER = (float)0.95;
-const float g_DISTANCE_PARAMETER = (float)82.0; // (float)80.0;
-const float g_MINIMUM_OUTLYING_PROPORTION = (float)0.50; // (float)0.10;
+const float g_FRACTION_PARAMETER = (float)0.94; // (float)0.95;
+const float g_DISTANCE_PARAMETER = (float)10.0; // (float)80.0;
+const float g_MINIMUM_OUTLYING_PROPORTION = (float)0.30; // (float)0.10;
 
-const int MDL_COST_ADVANTAGE = 20;
-const float MIN_LINESEGMENT_LENGTH = 1.0;
-const float MAX_LINESEGMENT_LENGTH = 10000.0;	// 100.0 only for deer
+const int MDL_COST_ADVANTAGE = 2; //20;
+const float MIN_LINESEGMENT_LENGTH = 0.5; // 1.0;
+const float MAX_LINESEGMENT_LENGTH = 100.0;	// 10000.0  // 100.0 only for deer
 
-#define WEIGHTED_DISTANCE(_x,_y,_z) ((float)1.0 * (_x) + (float)1.0 * (_y) + (float)10.0 * (_z))
+#define WEIGHTED_DISTANCE(_x,_y,_z) ((float)1.0 * (_x) + (float)1.0 * (_y) + (float)5.0 * (_z))
 // #define WEIGHTED_DISTANCE(_x,_y,_z) ((float)1.0 * (_x) + (float)1.0 * (_y) + (float)5.0 * (_z))
 
-#define RESULT_FILE "C:\\experiments\\trajectory outlier\\result\\result.txt"
+// #define WEIGHTED_DISTANCE(_x,_y,_z) ((float)1.0 * (_x) + (float)1.0 * (_y) + (float)10.0 * (_z))   //Thi copied
 
+// #define RESULT_FILE "C:\\experiments\\trajectory outlier\\result\\result.txt"
+#define RESULT_FILE "result.txt"
 #endif
+            
